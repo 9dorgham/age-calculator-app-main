@@ -96,6 +96,11 @@ input + .error {
 .seperator button:hover {
     background-color: hsl(0, 0%, 8%);
 }
+.seperator button svg {
+    width: 2em;
+    height: 2em;
+}
+
 
 .result {
     font-size: 3em;
@@ -114,7 +119,9 @@ input + .error {
 /*Small devices */ 
 @media (min-width: 576px) { 
     .container {
+        border-radius: 1em 1em 10em;
         margin: 5em auto;
+        padding: 3em;
     }
 
     input {
@@ -125,9 +132,13 @@ input + .error {
         right: 0%;
         transform: translate(0%, -100%);
     }
+    .seperator button svg {
+        width: 3em;
+        height: 3em;
+    }
 
     .result {
-        font-size: 4em;
+        font-size: 5em;
     }
 
 }
