@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "poppins-exbodi";
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: "poppins-bold";
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "poppins-regular";
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+
+body {
+    background-color: hsl(0, 0%, 94%);
+}
+
+.container {
+    background-color: #fff;
+    margin: 5em 1em;
+    max-width: 600px;
+    border-radius: 1em 1em 5em;
+    font-family: "poppins-regular";
+    padding: 3em 1em;
+    /* padding: 2em; */
+}
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head {
+    gap: 1em;
+    border-bottom: 1px solid hsl(0, 0%, 86%);
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    justify-content: space-between;
+}
+
+
+.head div {
+    flex-grow: 1;
+}
+label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "poppins-bold";
+}
+label.failed {
+    color: hsl(0, 100%, 67%);
+}
+label.failed + input {
+    border-color: hsl(0, 100%, 67%);
+}
+input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 86%);
+    outline: none;
+    border-radius: 5px;
+    font-family: "poppins-bold";
+    caret-color: hsl(259, 100%, 65%);
+}
+input::placeholder {
+    color: hsl(0, 0%, 86%);
+}
+input:focus {
+    border-color: hsl(259, 100%, 65%);
+}
+input + .error {
+    position: absolute;
+    color: hsl(0, 100%, 67%);
+    font-size: 12px;
+    font-family: "poppins-regular";
+    font-style: italic;
+}
+.seperator {
+    position: relative;
+}
+.seperator button {
+    border: none;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -100%);
+    cursor: pointer;
+}
+.seperator button:hover {
+    background-color: hsl(0, 0%, 8%);
+}
+
+.result {
+    font-size: 3em;
+    font-family: "poppins-exbodi";
+}
+.result span {
+    color: hsl(259, 100%, 65%);
+}
+.result b {
+    color: hsl(0, 0%, 8%)
+}
+
+
+/* I applied style using the method "mobile-first" */
+
+/*Small devices */ 
+@media (min-width: 576px) { 
+    .container {
+        margin: 5em auto;
+    }
+
+    input {
+        font-size: 32px;
+    }
+    .seperator button {
+        left: auto;
+        right: 0%;
+        transform: translate(0%, -100%);
+    }
+
+    .result {
+        font-size: 4em;
+    }
+
+}
+
+@media (min-width: 768px)  {
+    .head {
+        padding-bottom: 3em;
+        justify-content: flex-start;
+    }
+    .head div {
+        flex-grow: unset;
+        width: 150px;
+    }
+
+    .seperator button {
+        width: 70px;
+        height: 70px;
+    }
+}   
